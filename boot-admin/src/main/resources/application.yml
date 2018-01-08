@@ -3,10 +3,17 @@ server:
 management:
   security:
     enabled: false
+
 eureka:
   client:
     service-url:
       defaultZone: 'http://peer1:8080/eureka/'
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
 spring:
   application:
     name: 'boot-admin'
@@ -14,3 +21,39 @@ spring:
     loadbalancer:
       retry:
         enabled: true
+  profiles:
+    active:
+      - secure
+spring.boot.admin.turbine:
+  clusters: default
+  location: turbine
+security:
+  basic:
+    enabled: false
+  user:
+    name: user
+    password: pass
+logging:
+  file: "target/boot-admin.log"
+---
+spring:
+  profiles: insecure
+
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+---
+spring:
+  profiles: secure
+  boot:
+    admin:
+      username: "${security.user.name}"
+      password: "${security.user.password}"
+      client:
+        metadata:
+          user.name: "${security.user.name}"
+          user.password: "${security.user.password}"
