@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="boot-admin" />
+        <module name="bootadmin" />
+        <module name="config-server" />
+        <module name="eureka-register-server" />
+        <module name="eurekaserver" />
+        <module name="hystrix-dashboard" />
+        <module name="service-api-user" />
+        <module name="service-user" />
+        <module name="service-user-consumer" />
+        <module name="turbine" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
+      <module name="boot-admin" target="1.8" />
+      <module name="bootadmin" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-register-server" target="1.8" />
+      <module name="eurekaserver" target="1.8" />
+      <module name="hystrix-dashboard" target="1.8" />
+      <module name="service-api-user" target="1.8" />
+      <module name="service-user" target="1.8" />
+      <module name="service-user-consumer" target="1.8" />
+      <module name="spring-cloud-demo" target="1.8" />
+      <module name="turbine" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

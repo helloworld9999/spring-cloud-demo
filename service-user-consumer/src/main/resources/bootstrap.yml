@@ -1,0 +1,28 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: service-user-consumer
+  rabbitmq:
+     host: localhost
+     port: 5672
+     username: guest
+     password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: 'http://peer1:8080/eureka/'
+
+ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 3
+  OkToRetryOnAllOperations: true
+  ConnectTimeout: 1500
+  ReadTimeout: 2000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000

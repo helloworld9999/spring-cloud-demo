@@ -1,0 +1,16 @@
+server:
+  port: 7020
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: 'http://peer1:8080/eureka/'
+spring:
+  application:
+    name: 'boot-admin'
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
