@@ -1,5 +1,7 @@
 server:
   port: 9000
+logging:
+   file: "target/service-user-consumer.log"
 spring:
   application:
     name: service-user-consumer

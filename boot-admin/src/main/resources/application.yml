@@ -3,7 +3,6 @@ server:
 management:
   security:
     enabled: false
-
 eureka:
   client:
     service-url:
